@@ -12,4 +12,4 @@ Cenário:Login mal sucedido - e-mail ou senha inexistente
 Dado que o sistema não tenha uma conta registrada com o email 'email@email.com' e senha 'S3nH4B0@'
 Quando eu preencho as credenciais de e-mail: 'email@email.com' e senha: 'S3nH4B0@'
 E submeto a requisição
-Então vejo o aviso de 'email/senha incorreto' 
+Então vejo o aviso de 'email/senha incorreto. Tente novamente.' 
