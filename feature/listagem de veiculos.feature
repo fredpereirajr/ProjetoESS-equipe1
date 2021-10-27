@@ -40,20 +40,3 @@ E o sistema possui 2 modelos 'Hyundai HB20', sendo 1 disponível para aluguel e 
 Quando seleciono a opção para listagem de veículos
 Então é visto o que o modelo 'Fiat uno' possui 1 veículo disponível para aluguel e 2 alugados
 E é visto que o modelo 'Hyundai HB20' possui 1 veículo disponível para aluguel e 1 alugado
-
-"Then criado para o roteiro de requisito"
-Cenário: teste - roteiro 
-Dado que ---
-E ----
-E ---
-Quando ----
-Então ----
-E ----
-
-Cenário2: teste2 - roteiro 
-Dado que ---
-E ----
-E ---
-Quando alteracao (fixDesenvolvimento)
-Então ----
-E ----
