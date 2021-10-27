@@ -48,3 +48,11 @@ E ---
 Quando ----
 Então ----
 E ----
+
+Cenário2: teste2 - roteiro 
+Dado que ---
+E ----
+E ---
+Quando ----
+Então ----
+E ----
