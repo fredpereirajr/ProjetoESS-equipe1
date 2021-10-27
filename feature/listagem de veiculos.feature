@@ -54,6 +54,6 @@ Cenário2: teste2 - roteiro
 Dado que ---
 E ----
 E ---
-Quando ----
+Quando alteracao (fixDesenvolvimento)
 Então ----
 E ----
