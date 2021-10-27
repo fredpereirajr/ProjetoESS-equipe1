@@ -42,3 +42,18 @@ Então é visto o que o modelo 'Fiat uno' possui 1 veículo disponível para alu
 E é visto que o modelo 'Hyundai HB20' possui 1 veículo disponível para aluguel e 1 alugado
 
 "Then criado para o roteiro de requisito"
+Cenário: teste - roteiro 
+Dado que ---
+E ----
+E ---
+Quando ----
+Então ----
+E ----
+
+Cenário2: teste2 - roteiro 
+Dado que ---
+E ----
+E ---
+Quando ----
+Então ----
+E ----
