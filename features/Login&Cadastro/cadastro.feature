@@ -10,10 +10,10 @@ Eu quero realizar meu cadastro no sistema de locadora
 
   - Cenário: Senha inválida
   Dado que um 'usuário' tenta realizar um cadastro no sistema
-  Quando informar uma senha que possua menos de 8 caracteres, não possua números ou não possua letras maiúsculas e minúsculas
+  Quando informar uma senha que possua menos de 8 caracteres
   E tentar realizar o cadastro
   Então o cadastro não é aceito pelo sistema
-  E a mensagem de erro: “Senha incorreta” é repostada.
+  E a mensagem de erro: “Senha fraca” é repostada.
 
   - Cenário: Senhas não coincidem
   Dado que um 'usuário' tenta realizar um cadastro no sistema
