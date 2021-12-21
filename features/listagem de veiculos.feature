@@ -2,12 +2,6 @@ Feature: Listagem de veículos
 Como o 'usuário' do sistema de locadora
 Eu quero visualizar os carros disponíveis para aluguel e suas respectivas quantidades
 
-Cenário: Listar carros - usuário (cliente e admin)
-Dado que eu estou na página 'Listagem de veículos' e logado como um usuário
-E o sistema não possui nenhum veículo registrado
-Quando seleciono a opção para listagem de carros
-Então uma mensagem é retornada informando que não existe nenhum veículo registrado no sistema.
-
 Cenário: Filtragem de veículos - usuário (cliente e admin)
 Dado que eu estou na página 'Listagem de veículos' e logado como um usuário
 E o sistema possui 1 veículo de modelo 'Fiat uno' registrado e disponível para aluguel
