@@ -6,7 +6,7 @@ Cenário:Login bem sucedido
 Dado que o sistema tenha uma conta registrada com o email 'email@email.com' e senha 'S3nH4B0@'
 Quando eu preencho as credenciais de e-mail: 'email@email.com' e senha: 'S3nH4B0@'
 E submeto a requisição
-Então tenho acesso a página inicial
+Então surge uma opção para acesso à página inicial
 
 Cenário:Login mal sucedido - e-mail ou senha inexistente 
 Dado que o sistema não tenha uma conta registrada com o email 'email@email.com' e senha 'S3nH4B0@'
