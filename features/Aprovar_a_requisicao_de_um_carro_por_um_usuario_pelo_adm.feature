@@ -7,6 +7,6 @@ Dado que estou logado como ADM
 E estou na página de solicitações
 E o sistema possui uma solicitação com o status:'pendente'
 Quando clico em aprovar
-Então a solicitação de carro é aprovada
+Então a solicitação de carro tem o status alterado para 'aprovada'
 E o botão de aprovar desaparece
 
