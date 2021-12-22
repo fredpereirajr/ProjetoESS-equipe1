@@ -17,11 +17,12 @@ usuarioRouter.route("/")   //get para a rota inicial
         var body= req.body;
         const email=body.email;
         const senha=body.senha;
+        console.log(email, senha)
         let login = usuarioController.logar(email, senha); 
         if (login) {
-            return res.json({Sucesso:"Login realizado com sucesso"})
+            return res.json({sucesso:"Login realizado com sucesso"})
         }else{
-            return res.status(409).json({Falha:"Nome ou senha inválidos"})
+            return res.status(404).json({falha:"email ou senha inválidos"})
         }
         
     })
@@ -38,9 +39,22 @@ usuarioRouter.route("/")   //get para a rota inicial
         if (cadastro) {
             return res.json({Sucesso:"Cadastro realizado com sucesso"})
         }else{
-            return res.status(409).json({Falha:"Email/Credencial em uso"})
+            return res.status(404).json({Falha:"Email/Credencial em uso"})
         }
     })
+
+    usuarioRouter.route("/usuarioLogado")   
+    .get((req: Request, res: Response) => {
+        let usuarioLogado = usuarioController.getUsuarioLogado()
+        if (usuarioLogado) {
+            return res.json({usuarioLogado})
+        }else {
+            return res.status(404).json({Falha:"Nenhum usuário logado"})
+        }
+
+    })
+
+    
 
 
 export default usuarioRouter;

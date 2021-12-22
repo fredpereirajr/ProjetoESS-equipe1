@@ -3,13 +3,18 @@ import { Usuario } from "../models/usuario";
 export class UsuarioController {
     
     usuarios:Usuario[];
-    
+    usuarioLogado:Usuario;    //Armazena o usuário logado.
+
     constructor() {
-        this.usuarios=[];
+        this.usuarios= [];
     }
 
     getUsuarios():Usuario[] {
         return this.usuarios;
+    }
+
+    getUsuarioLogado():Usuario {
+        return this.usuarioLogado;
     }
 
     cadastrar(usuario: Usuario):boolean {
@@ -26,6 +31,9 @@ export class UsuarioController {
         for (let index = 0; index < this.usuarios.length; index++) {
             if (this.usuarios[index].email == email && this.usuarios[index].senha == senha) {
                 permissao = true;
+                this.usuarioLogado = this.usuarios[index];
+                //talvez para identificar usuario logado, sejs melhor a gente retornar junto com a informação
+                //que foi logado com sucesso o indice do usuario logado em usuarios[]
                 return permissao;
             }   
         }
