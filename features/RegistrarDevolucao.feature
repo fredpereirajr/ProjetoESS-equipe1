@@ -1,25 +1,25 @@
-Feature: Registrar devoluÁ„o do carro
+Feature: Registrar devolu√ß√£o do carro
 Como o 'administrador' do sistema de locadora
-Eu quero registrar a devoluÁ„o do carro
-De forma que eu registre o hor·rio de devoluÁ„o e, caso a entrega seja feita com atraso, uma multa seja aplicada automaticamente
+Eu quero registrar a devolu√ß√£o do carro
+De forma que eu registre o hor√°rio de devolu√ß√£o e, caso a entrega seja feita com atraso, uma multa seja aplicada automaticamente
 
-Cen·rio: Registro de devoluÁ„o no prazo
-Dado que que o carro 'X' est· registrado no sistema
-E o carro 'X' est· em situaÁ„o de 'alugado' para o cliente 'W'
-E o prazo para a entrega do carro 'X' ainda n„o expirou
-Quando eu mudo a situaÁ„o do carro 'X' para 'devolvido'
-Ent„o eu vejo o alerta: 'DevoluÁ„o feita no prazo.'
+Cen√°rio: Registro de devolu√ß√£o no prazo
+Dado que estou logado como ADM e estou na p√°gina de Registro de Devolu√ß√£o
+E o sistema cont√®m uma requisi√ß√£o com status:'aprovado'
+Quando eu informo a data de devolu√ß√£o
+E clico em 'Registrar'
+Ent√£o eu vejo o alerta: 'Devolu√ß√£o feita com sucesso'
 
-Cen·rio: Registro de devoluÁ„o fora do prazo
-Dado que que o carro 'X' est· registrado no sistema
-E o carro 'X' est· em situaÁ„o de 'alugado' para o cliente 'W'
+Cen√°rio: Registro de devolu√ß√£o fora do prazo
+Dado que que o carro 'X' est√° registrado no sistema
+E o carro 'X' est√° em situa√ß√£o de 'alugado' para o cliente 'W'
 E o prazo para a entrega do carro 'X' expirou em Y unid.Tempo
-Quando eu mudo a situaÁ„o do carro 'X' para 'devolvido'
-Ent„o eu vejo o alerta: 'DevoluÁ„o feita fora do prazo.'
-E uma multa Z(Y) È aplicada ao cliente 'W'
+Quando eu mudo a situa√ß√£o do carro 'X' para 'devolvido'
+Ent√£o eu vejo o alerta: 'Devolu√ß√£o feita fora do prazo.'
+E uma multa Z(Y) √© aplicada ao cliente 'W'
 
-Cen·rio: Registro de devoluÁ„o de carro n„o registrado
-Dado que que o carro 'X' n„o est· registrado no sistema
-Quando eu tento alterar a situaÁ„o do carro 'X' para 'devolvido'
-Ent„o eu vejo o alerta de erro: 'Carro n„o registrado na base.'
-E uma multa Z(Y) È aplicada ao cliente 'W'
+Cen√°rio: Registro de devolu√ß√£o de carro n√£o registrado
+Dado que que o carro 'X' n√£o est√° registrado no sistema
+Quando eu tento alterar a situa√ß√£o do carro 'X' para 'devolvido'
+Ent√£o eu vejo o alerta de erro: 'Carro n√£o registrado na base.'
+E uma multa Z(Y) √© aplicada ao cliente 'W'
