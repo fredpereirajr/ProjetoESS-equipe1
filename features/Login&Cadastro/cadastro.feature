@@ -3,8 +3,8 @@ Como o 'usuário' do sistema de locadora
 Eu quero realizar meu cadastro no sistema de locadora
 
   - Cenário: Cadastro de 'cliente' bem sucedido
-  Dado que o sistema não tenha nenhum 'cliente' com email cliente@email.com'
-  Quando eu me cadastro inserindo meu email: 'cliente@email.com', senha e confirmação da senha
+  Dado que o sistema não tenha nenhum 'cliente' com email 'cliente@email.com'
+  Quando eu me cadastro inserindo meu email: 'cliente@email.com', senha:'S3nh4F0rt&' e confirmação da senha: 'S3nh4F0rt&'
   E preencho senha e confirmação de senha válidas
   Então minha conta é registrada no sistema
 
