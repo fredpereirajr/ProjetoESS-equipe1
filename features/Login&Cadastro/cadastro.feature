@@ -8,6 +8,7 @@ Eu quero realizar meu cadastro no sistema de locadora
   Quando eu me cadastro inserindo meu email: 'cliente@email.com', senha:'S3nh4F0rt&' e confirmação da senha: 'S3nh4F0rt&'
   E preencho senha e confirmação de senha válidas
   Então minha conta é registrada no sistema
+  E vejo o alerta "Cadastro realizado com sucesso"
 
   - Cenário: Senha inválida
   Dado que estou na página inicial e clico em cadastro
