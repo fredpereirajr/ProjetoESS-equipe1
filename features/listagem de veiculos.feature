@@ -22,15 +22,14 @@ Então é visto 1 modelo 'Fiat uno' alugado.
 
 Cenário: Listar carros - Cliente
 Dado que eu estou na página 'Listagem de veículos' e logado como cliente
-E o sistema possui 3 modelos 'Fiat uno', sendo 1 disponível para aluguel e 2 alugados.
-E o sistema possui 2 modelos 'Hyundai HB20', sendo 1 disponível para aluguel e 1 alugado
-Quando seleciono a opção para listagem de carros
-Então é visto 1 modelo 'Fiat uno' e 1 modelo 'Hyundai HB20' disponíveis para aluguel
+E o sistema possui 9 carros do modelo 'Fiat uno' disponíveis
+E o sistema possui 6 carros do modelo 'Hyundai HB20' disponíveis
+E o sistema possui 1 carro do modelo 'Ferrari Roma' disponível
+E o sistema possui 7 carros do modelo 'Chevrolet Monza' disponíveis
+Quando clico em buscar sem digitar nada no campo de texto a opção para listagem de carros
+Então é exibido todos os modelos e suas quantidades diponíveis, juntamente com a opção de fazer ir para a página de solicitação
 
 Cenário: Listar carros - Administrador 
 Dado que eu estou na página 'Listagem de veículos' e logado como admin
-E o sistema possui 3 modelos 'Fiat uno', sendo 1 disponível para aluguel e 2 alugados.
-E o sistema possui 2 modelos 'Hyundai HB20', sendo 1 disponível para aluguel e 1 alugado
-Quando seleciono a opção para listagem de veículos
-Então é visto o que o modelo 'Fiat uno' possui 1 veículo disponível para aluguel e 2 alugados
-E é visto que o modelo 'Hyundai HB20' possui 1 veículo disponível para aluguel e 1 alugado
+Quando clico em buscar sem digitar nada no campo de texto a opção para listagem de carros
+Então é mostrado cada carro registrado no sitema, exibindo seu modelo, diponibilidade e chassi
