@@ -1,15 +1,23 @@
 Feature: Login de cliente/administrador
-Como o 'usu·rio' do sistema de locadora
+Como o 'usu√°rio' do sistema de locadora
 Eu quero realizar meu login na plataforma
 
-Cen·rio:Login bem sucedido
-Dado que o sistema tenha uma conta registrada com o email 'email@email.com' e senha 'S3nH4B0@'
-Quando eu preencho as credenciais de e-mail: 'email@email.com' e senha: 'S3nH4B0@'
-E submeto a requisiÁ„o
-Ent„o surge uma opÁ„o para acesso ‡ p·gina inicial
+Cen√°rio:Login(cliente) bem sucedido
+Dado que estou na p√°gina inicial e clico em login
+E o sistema tenha uma conta registrada com o email 'clinte@email.com' e senha 'S3nh4F0rt&@'
+Quando eu preencho as credenciais de e-mail: 'clinte@email.com' e senha: 'S3nh4F0rt&@'
+E submeto a requisi√ß√£o
+Ent√£o surge uma op√ß√£o para acesso √† p√°gina inicial, bot√£o home aparece
 
-Cen·rio:Login mal sucedido - e-mail ou senha inexistente 
-Dado que o sistema n„o tenha uma conta registrada com o email 'email@email.com' e senha 'S3nH4B0@'
+Cen√°rio:Login(adm) bem sucedido
+Dado que estou na p√°gina inicial e clico em login
+E o sistema tenha uma conta registrada com o email 'adm@email.com' e senha 'S3nh4F0rt&'
+Quando eu preencho as credenciais de e-mail: 'adm@email.com' e senha: 'S3nh4F0rt&'
+E submeto a requisi√ß√£o
+Ent√£o surge uma op√ß√£o para acesso √† p√°gina inicial, bot√£o home aparece
+
+Cen√°rio:Login mal sucedido - e-mail ou senha inexistente 
+Dado que o sistema n√£o tenha uma conta registrada com o email 'email@email.com' e senha 'S3nH4B0@'
 Quando eu preencho as credenciais de e-mail: 'email@email.com' e senha: 'S3nH4B0@'
-E submeto a requisiÁ„o
-Ent„o vejo o aviso de 'email/senha incorreto. Tente novamente.' 
+E submeto a requisi√ß√£o
+Ent√£o vejo o aviso de 'email ou senha inv√°lidos' 
