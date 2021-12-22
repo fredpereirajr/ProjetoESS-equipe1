@@ -1,16 +1,12 @@
-Feature: Aprovar a requisiÁ„o de um carro por um usu·rio pelo administrador
+Feature: Aprovar a requisi√ß√£o de um carro por um usu√°rio pelo administrador
 Como o 'administrador' do sistema de locadora
-Eu quero liberar para o cliente a locaÁ„o do carro escolhido
+Eu quero liberar para o cliente a loca√ß√£o do carro escolhido
 
-Cen·rio: Cliente retira o carro de forma bem sucedida
-Dado que O cliente solicitou a locaÁ„o de um carro
-E teve sua solicitaÁ„o aprovada
-Quando o administrador aprova a retirada do carro
-Ent„o o cliente pode retirar seu carro
+Cen√°rio: Cliente retira o carro de forma bem sucedida
+Dado que estou logado como ADM
+E estou na p√°gina de solicita√ß√µes
+E o sistema possui uma solicita√ß√£o com o status:'pendente'
+Quando clico em aprovar
+Ent√£o a solicita√ß√£o de carro √© aprovada
+E o bot√£o de aprovar desaparece
 
-Cen·rio:Cliente n„o retira o carro de forma bem sucedida
-Dado que o cliente solicitou a locaÁ„o de um carro
-E informou sua forma de pagamento
-E n„o teve sua transaÁ„o aprovada
-Quando o administrador n„o aprova a retirada do carro
-Ent„o o cliente n„o poder· locar o carro
