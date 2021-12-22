@@ -1,30 +1,33 @@
-Feature: Solicitação de locação
+Feature: SolicitaÃ§Ã£o de locaÃ§Ã£o
 Como o 'cliente' do sistema de locadora
-Eu quero solicitar a locação de um carro
-De forma que eu indique a data de retirada e data de devolução
+Eu quero solicitar a locaÃ§Ã£o de um carro
+De forma que eu indique a data de retirada e data de devoluÃ§Ã£o
 	
-Cenário: o cliente solicita a locação de um veículo
-Dado que o cliente tem acesso a listagem de veículos disponíveis para locação
-E escolhe um modelo de veículo que deseja locar
-E e informa a data que pretende retirar e devolver o veículo
-E informa sua forma de pagamento
-Quando o cliente envia sua solicitação de locação ao sistema
-Então o administrador irá analisar a solicitação do cliente para a locação do veículo
+CenÃ¡rio: o cliente solicita a locaÃ§Ã£o de um veÃ­culo
+Dado que estou logado como cliente
+E tenho acesso a listagem de veÃ­culos disponÃ­veis para locaÃ§Ã£o
+E quero alugar um carro do modelo 'Ferrari Roma' que tem 1 veiculo disponÃ­vel
+E estou na pÃ¡gina de solicitaÃ§Ã£o de carro do modelo desejado
+E informo a data que pretendo retirar:01/12/2022 e devolver:01/01/2023 o veÃ­culo
+Quando o clico em 'solicitar' 
+EntÃ£o vejo um alerta com: 'RequisiÃ§Ã£o bem sucedida'
+E minha requisiÃ§Ã£o de aluguel de carro foi mandada ao ADM
 
-Cenário: Datas não informadas
-Dado que o 'cliente' tem acesso a listagem de veículos disponíveis para locação
-E escolhe um modelo de veículo que deseja locar
-Quando tenta solicitar a locação de um veículo
-E não informa a data de solicitação ou a data de devolução
-Então o aluguel deve automaticamente bloqueado
+CenÃ¡rio: Datas nÃ£o informadas
+Dado que o 'cliente' tem acesso a listagem de veÃ­culos disponÃ­veis para locaÃ§Ã£o
+E escolhe um modelo de veÃ­culo que deseja locar
+Quando tenta solicitar a locaÃ§Ã£o de um veÃ­culo
+E nÃ£o informa a data de solicitaÃ§Ã£o ou a data de devoluÃ§Ã£o
+EntÃ£o o aluguel deve automaticamente bloqueado
 E um erro apropriado deve ser reportado
-E a solicitação não deve ser enviada para o 'administrador'
+E a solicitaÃ§Ã£o nÃ£o deve ser enviada para o 'administrador'
 
-Cenário: Datas inválidas
-Dado que o 'cliente' tem acesso a listagem de veículos disponíveis para locação
-E escolhe um modelo de veículo que deseja locar
-Quando informa a data de solicitação e de devolução
-E a data de solicitação é posterior a de devolução
-Então o aluguel deve automaticamente bloqueado
-E um erro apropriado deve ser reportado
-E a solicitação não deve ser enviada para o 'administrador'
+CenÃ¡rio: Datas invÃ¡lidas
+Dado que estou logado como cliente
+E tenho acesso a listagem de veÃ­culos disponÃ­veis para locaÃ§Ã£o
+E quero alugar um carro do modelo 'Fiat UNO' que tem 1 veiculo disponÃ­vel
+E estou na pÃ¡gina de solicitaÃ§Ã£o de carro do modelo desejado
+E informo a data que pretendo retirar:02/02/2022 e devolver:01/01/2022 o veÃ­culo
+Quando o clico em 'solicitar' 
+EntÃ£o vejo um alerta com: 'Data invÃ¡lida'
+E minha requisiÃ§Ã£o de aluguel de carro nÃ£o foi mandada ao ADM
